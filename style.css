@@ -1,44 +1,88 @@
+/* Style global */
 body {
   font-family: Arial, sans-serif;
-  background: #f8f9fa;
+  background: #f9f9f9;
   text-align: center;
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 
-.container {
+/* Navigation */
+nav {
+  background-color: #007bff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Conteneur principal */
+.app {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header img {
+  max-width: 250px;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* File Upload */
+.uploader {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  margin: 3rem auto;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
 .file-input {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px;
+  padding: 12px 20px;
   background: #f4f4f4;
   border: 1px solid #ddd;
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  width: 100%;
+  width: fit-content; /* 🔹 Ajuste la largeur au contenu */
+  min-width: 200px; /* 🔹 Empêche qu'il soit trop petit */
   justify-content: center;
 }
 
 input[type="file"] {
   display: none;
-}
-
-.file-label {
-  cursor: pointer;
 }
 
 .upload-btn {
@@ -54,6 +98,7 @@ input[type="file"] {
   align-items: center;
   gap: 8px;
   margin-top: 15px;
+  width: fit-content; /* 🔹 Ajuste la largeur automatiquement */
 }
 
 .upload-btn:hover {

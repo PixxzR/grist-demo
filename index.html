@@ -3,22 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Importer un fichier</title>
+    <title>France Travail Data Manager</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h2>Importer un fichier</h2>
-      <p>Sélectionnez le fichier Excel à importer dans Grist.</p>
+    <!-- Navigation -->
+    <nav>
+      <a href="#">Importation</a>
+      <a href="#">Administration</a>
+    </nav>
 
-      <label class="file-input">
-        📂 <span id="file-label">Choisir un fichier</span>
-        <input type="file" accept=".xlsx" id="file-input" />
-      </label>
+    <!-- Contenu Principal -->
+    <div class="app">
+      <!-- Header -->
+      <div class="header">
+        <img src="logo.png" alt="Logo France Travail" />
+        <h1>France Travail Data Manager</h1>
+        <p>
+          Importez facilement vos fichiers Excel dans Grist et suivez le statut
+          de vos données.
+        </p>
+      </div>
 
-      <button class="upload-btn" id="upload-btn">📤 Importer le fichier</button>
+      <!-- Formulaire Upload -->
+      <div class="uploader">
+        <label class="file-input">
+          📂 <span id="file-label">Choisir un fichier</span>
+          <input type="file" accept=".xlsx" id="file-input" />
+        </label>
 
-      <p class="status" id="status"></p>
+        <button class="upload-btn" id="upload-btn">
+          📤 Importer le fichier
+        </button>
+
+        <p class="status" id="status"></p>
+      </div>
     </div>
 
     <script>
