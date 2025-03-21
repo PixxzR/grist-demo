@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Importer un fichier</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Importer un fichier</h2>
+      <p>Sélectionnez le fichier Excel à importer dans Grist.</p>
+
+      <label class="file-input">
+        📂 <span id="file-label">Choisir un fichier</span>
+        <input type="file" accept=".xlsx" id="file-input" />
+      </label>
+
+      <button class="upload-btn" id="upload-btn">📤 Importer le fichier</button>
+
+      <p class="status" id="status"></p>
+    </div>
+
+    <script>
+      document
+        .getElementById("file-input")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          document.getElementById("file-label").textContent = file
+            ? file.name
+            : "Choisir un fichier";
+        });
+
+      document
+        .getElementById("upload-btn")
+        .addEventListener("click", function () {
+          document.getElementById("status").textContent =
+            "✅ Simulation d'import réussi !";
+        });
+    </script>
+  </body>
+</html>
